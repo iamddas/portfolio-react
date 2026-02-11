@@ -56,28 +56,45 @@ export const portfolioData = {
     experience: [
         {
             id: 1,
-            role: 'Senior Frontend Engineer',
-            company: 'TechCorp',
-            period: '2022 - Present',
-            description: 'Led frontend architecture and team of 5 developers. Improved performance by 40% through optimization and implemented design system.',
-            skills: ['React', 'TypeScript', 'Leadership'],
+            role: "Full Stack Engineer",
+            company: "Think Talent Services",
+            period: "2025 - Present",
+            description: "Working on both frontend and backend development. Migrated a legacy Java Spring Boot 2 application to Spring Boot 3, resolving Jakarta namespace changes and dependency compatibility issues. Enhanced Spring Security by replacing deprecated WebSecurityConfigurerAdapter with SecurityFilterChain configuration, improving authentication and authorization handling. Developed responsive UI using React and TypeScript, integrated REST APIs, handled CORS configuration, and participated in deployment and version control using Git and GitHub.",
+            skills: [
+                "React",
+                "TypeScript",
+                "Java",
+                "Spring Boot 3",
+                "Spring Security",
+                "REST APIs",
+                "Git",
+                "GitHub"
+            ]
         },
         {
             id: 2,
-            role: 'Full-Stack Developer',
-            company: 'StartupHub',
-            period: '2020 - 2022',
-            description: 'Built and maintained 3 production applications. Implemented CI/CD pipelines and mentored 2 junior developers.',
-            skills: ['React', 'Node.js', 'AWS'],
-        },
-        {
+            role: "Software Engineering Intern",
+            company: "Think Talent Services",
+            period: "2024 - 2025",
+            description: "Contributed to development and maintenance of web applications using React and Spring Boot. Implemented API integration, form validation, and state management. Fixed bugs, improved UI responsiveness, and assisted in backend endpoint development. Worked with Git-based workflows and learned debugging, API testing, and deployment fundamentals.",
+            skills: [
+                "React",
+                "JavaScript",
+                "Java",
+                "Spring Boot",
+                "REST APIs",
+                "Git",
+                "GitHub"
+            ]
+        }
+        /*{
             id: 3,
             role: 'Frontend Developer',
             company: 'DesignStudio',
             period: '2019 - 2020',
             description: 'Developed responsive web applications and collaborated closely with design team. Improved mobile performance by 35%.',
             skills: ['React', 'CSS', 'Figma'],
-        },
+        },*/
     ],
 
     socialLinks: [
