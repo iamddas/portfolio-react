@@ -98,9 +98,9 @@ export const portfolioData = {
     ],
 
     socialLinks: [
-        {label: 'GitHub', url: 'https://github.com', icon: 'Github'},
-        {label: 'LinkedIn', url: 'https://linkedin.com', icon: 'Linkedin'},
-        {label: 'Twitter', url: 'https://twitter.com', icon: 'Twitter'},
-        {label: 'Email', url: 'mailto:hello@alexchen.dev', icon: 'Mail'},
+        {label: 'GitHub', url: 'https://github.com/iamddas', icon: 'Github'},
+        {label: 'LinkedIn', url: 'www.linkedin.com/in/debasishdas199', icon: 'Linkedin'},
+        {label: 'Twitter', url: 'https://x.com/dasdebasish199', icon: 'Twitter'},
+        {label: 'Email', url: 'mailto:welldebasish@gmail.com', icon: 'Mail'},
     ],
 };
