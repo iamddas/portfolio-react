@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useScrollObserver } from '../hooks';
 import { portfolioData } from '../utils/portfolioData';
+import profileImage from '../assets/dd.jpeg'; // Placeholder image path
 
 export const About = () => {
   const [ref, isVisible] = useScrollObserver();
@@ -46,16 +47,13 @@ export const About = () => {
             variants={itemVariants}
             className="relative"
           >
-            <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
-              {/* Placeholder for profile image */}
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary mx-auto mb-4 opacity-30" />
-                  <p className="text-dark-600 dark:text-dark-400">
-                    Profile Image
-                  </p>
-                </div>
-              </div>
+            <div className="relative w-full aspect-square flex items-center justify-center">
+              {/* Circular profile image */}
+              <img
+                src={profileImage}
+                alt="Profile"
+                className="w-64 h-64 rounded-full object-cover border-4 border-primary/30"
+              />
 
               {/* Floating accent */}
               <motion.div
