@@ -6,7 +6,7 @@ export const portfolioData = {
     phone: '9439450858',
     location: 'India',
 
-    about: `I'm a passionate full-stack developer with 2+ years of experience crafting elegant solutions to complex problems. I specialize in React, Node.js, and modern web technologies. When I'm not coding, you'll find me exploring design trends, contributing to open source, or documenting my learning journey.`,
+    about: `I'm a passionate full-stack developer with ${Math.max(new Date().getFullYear() - 2024, 0)}+ years of experience crafting elegant solutions to complex problems. I specialize in React, Node.js, and modern web technologies. When I'm not coding, you'll find me exploring design trends, contributing to open source, or documenting my learning journey.`,
 
     skills: {
         frontend: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Next.js', 'Vue.js'],

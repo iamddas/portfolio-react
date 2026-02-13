@@ -47,13 +47,19 @@ export const About = () => {
             variants={itemVariants}
             className="relative"
           >
-            <div className="relative w-full aspect-square flex items-center justify-center">
-              {/* Circular profile image */}
-              <img
-                src={profileImage}
-                alt="Profile"
-                className="w-64 h-64 rounded-full object-cover border-4 border-primary/30"
-              />
+
+              <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+
+                {/* Placeholder for profile image */}
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center">
+                    <img
+                        src={profileImage}
+                        alt="Profile"
+                        className="w-64 h-64 rounded-full object-cover border-4 border-primary/30"
+                    />
+                  </div>
+                </div>
 
               {/* Floating accent */}
               <motion.div
@@ -80,7 +86,7 @@ export const About = () => {
             {/* Quick stats */}
             <div className="grid grid-cols-2 gap-6 mt-12">
               {[
-                { number: '5+', label: 'Years Experience' },
+                { number: `${Math.max(new Date().getFullYear() - 2024, 0)}+`, label: 'Years Experience' },
                 { number: '20+', label: 'Projects Completed' },
                 { number: '100%', label: 'Client Satisfaction' },
                 { number: '3', label: 'Team Lead' },
