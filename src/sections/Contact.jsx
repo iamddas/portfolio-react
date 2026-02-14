@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollObserver } from '../hooks';
 import { portfolioData } from '../utils/portfolioData';
-import { Mail, Phone, MapPin, Send, Check } from 'lucide-react';
+import {Mail, Phone, MapPin, Send, Check, Linkedin, Github} from 'lucide-react';
 
 export const Contact = () => {
   const [ref, isVisible] = useScrollObserver();
@@ -119,17 +119,17 @@ export const Contact = () => {
               color: 'text-blue-500',
             },
             {
-              icon: Phone,
-              title: 'Phone',
-              value: portfolioData.phone,
-              href: 'tel:+15551234567',
+              icon: Linkedin,
+              title: 'LinkedIn',
+              // value: portfolioData.linkedin,
+              href: portfolioData.linkedin,
               color: 'text-purple-500',
             },
             {
-              icon: MapPin,
-              title: 'Location',
-              value: portfolioData.location,
-              href: '#',
+              icon: Github,
+              title: 'Github',
+              // value: portfolioData.github,
+              href: portfolioData.github,
               color: 'text-pink-500',
             },
           ].map((contact, index) => {

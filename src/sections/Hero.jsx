@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { ParticleBackground } from '../components';
 
 export const Hero = () => {
   const scrollToNext = () => {
@@ -34,8 +35,9 @@ export const Hero = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
     >
-      {/* Animated background gradient */}
+      {/* Animated background gradient and particles */}
       <div className="absolute inset-0 -z-10">
+        <ParticleBackground />
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/20 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-secondary/20 to-transparent rounded-full blur-3xl" />
       </div>
@@ -92,7 +94,7 @@ export const Hero = () => {
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-secondary"
+            className="btn btn-secondary"
           >
             Get In Touch
           </motion.a>

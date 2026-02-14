@@ -3,13 +3,14 @@ export const portfolioData = {
     title: 'Full-Stack Developer & UI/UX Designer',
     tagline: 'Building beautiful, functional digital experiences',
     email: 'welldebasish@gmail.com',
-    phone: '9439450858',
     location: 'India',
+    linkedin: 'https://www.linkedin.com/in/debasishdasofficial',
+    github: 'https://github.com/iamddas',
 
     about: `I'm a passionate full-stack developer with ${Math.max(new Date().getFullYear() - 2024, 0)}+ years of experience crafting elegant solutions to complex problems. I specialize in React, Node.js, and modern web technologies. When I'm not coding, you'll find me exploring design trends, contributing to open source, or documenting my learning journey.`,
 
     skills: {
-        frontend: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Next.js', 'Vue.js'],
+        frontend: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Next.js'],
         backend: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'GraphQL', 'REST APIs'],
         tools: ['Git', 'Docker', 'AWS', 'Figma', 'VS Code', 'CI/CD'],
     },

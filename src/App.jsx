@@ -3,7 +3,6 @@ import {
   Navbar,
   FloatingActionButton,
   Footer,
-  ParticleBackground,
 } from './components';
 import {
   Hero,
@@ -17,7 +16,6 @@ import {
 function App() {
   return (
     <ThemeProvider>
-      <ParticleBackground />
       <Navbar />
       <main className="overflow-x-hidden">
         <Hero />
