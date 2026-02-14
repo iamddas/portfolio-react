@@ -84,7 +84,7 @@ export const Hero = () => {
             href="#projects"
             whileHover={{ scale: 1.05, boxShadow: '0 20px 25px rgba(37, 99, 235, 0.25)' }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary bg-primary/10"
+            className="btn btn-gradient"
           >
             View My Work
           </motion.a>

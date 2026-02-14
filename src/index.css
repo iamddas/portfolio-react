@@ -1,9 +1,9 @@
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Custom fonts */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* Base styling */
 html {
@@ -11,8 +11,11 @@ html {
 }
 
 body {
-  @apply bg-white dark:bg-dark-900 text-dark-900 dark:text-dark-50 transition-colors duration-300;
-  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: var(--line-height-normal);
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* Remove default scrollbar styling */
@@ -21,16 +24,24 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-100 dark:bg-dark-800;
+  background: var(--color-dark-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-dark-300 dark:bg-dark-600 rounded-full hover:bg-dark-400 dark:hover:bg-dark-500;
+  background: var(--color-dark-300);
+  border-radius: var(--radius-full);
+  transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-400);
 }
 
 /* Smooth transitions */
 * {
-  @apply transition-colors duration-300;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: var(--transition-base);
+  transition-timing-function: ease-in-out;
 }
 
 /* Selection color */
