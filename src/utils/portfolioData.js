@@ -10,10 +10,54 @@ export const portfolioData = {
     about: `I'm a passionate full-stack developer with ${Math.max(new Date().getFullYear() - 2024, 0)}+ years of experience crafting elegant solutions to complex problems. I specialize in React, Node.js, and modern web technologies. When I'm not coding, you'll find me exploring design trends, contributing to open source, or documenting my learning journey.`,
 
     skills: {
-        frontend: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Next.js'],
-        backend: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'GraphQL', 'REST APIs'],
-        tools: ['Git', 'Docker', 'AWS', 'Figma', 'VS Code', 'CI/CD'],
+        frontend: [
+            'React',
+            'TypeScript',
+            'HTML5',
+            'CSS3',
+            'Responsive Design',
+            'Component-Based Architecture',
+            'React Hooks',
+            'Form Handling & Validation',
+            'API Integration (Axios/Fetch)'
+        ],
+
+        backend: [
+            'Spring Boot',
+            'Spring Security',
+            'REST API Development',
+            'Authentication & Authorization (JWT/Session)',
+            'MVC Architecture',
+            'Exception Handling & Validation',
+            'JPA/Hibernate'
+        ],
+
+        database: [
+            'MySQL',
+            'PostgreSQL',
+            'Schema Design',
+            'Entity Relationships'
+        ],
+
+        tools: [
+            'Git',
+            'GitHub',
+            'Postman',
+            'Maven/Gradle',
+            'IntelliJ IDEA',
+            'VS Code',
+            'Linux Basics',
+            'Debugging & Log Analysis'
+        ],
+
+        practices: [
+            'Clean Code',
+            'Code Refactoring',
+            'Reading Existing Codebases',
+            'Modular Design'
+        ]
     },
+
 
     projects: [
         {

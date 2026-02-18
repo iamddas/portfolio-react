@@ -64,7 +64,7 @@ export const Hero = () => {
           <span className="block">I'm</span>
           <span className="gradient-text block">Debasish Das</span>
           <span className="text-dark-600 dark:text-dark-400 block text-2xl sm:text-3xl lg:text-4xl font-normal mt-4">
-            Full-Stack Developer & UI/UX Designer
+            Software Engineer (Frontend-leaning Full Stack)
           </span>
         </motion.h1>
 
@@ -73,8 +73,8 @@ export const Hero = () => {
           variants={itemVariants}
           className="text-lg sm:text-xl text-dark-600 dark:text-dark-300 max-w-3xl mx-auto mb-8"
         >
-          I craft beautiful, functional digital experiences using modern web technologies.
-          Specializing in React, Node.js, and everything in between.
+            I design and build thoughtful web experiences from interface to API.
+            Working primarily with React and TypeScript, backed by Spring Boot services.
         </motion.p>
 
         {/* CTA Buttons */}

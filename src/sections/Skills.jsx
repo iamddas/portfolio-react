@@ -40,6 +40,17 @@ export const Skills = () => {
       skills: portfolioData.skills.tools,
       gradient: 'from-orange-500 to-red-500',
     },
+      {
+      title: 'Database',
+      skills: portfolioData.skills.database,
+      gradient: 'from-green-500 to-teal-500',
+    },
+      {
+      title: 'Practices',
+      skills: portfolioData.skills.practices,
+      gradient: 'from-yellow-500 to-amber-500',
+    },
+
   ];
 
   return (
@@ -58,7 +69,7 @@ export const Skills = () => {
         </motion.div>
 
         {/* Skills grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
           {skillCategories.map((category) => (
             <motion.div
               key={category.title}
