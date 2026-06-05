@@ -2,56 +2,26 @@ import { motion } from 'framer-motion';
 import { useScrollObserver } from '../hooks';
 import { portfolioData } from '../utils/portfolioData';
 
+const containerVariants = {
+  hidden:  { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+};
+
+const itemVariants = {
+  hidden:  { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+};
+
+const CATEGORIES = [
+  { key: 'frontend', label: 'Frontend',        accent: '#3b82f6' },
+  { key: 'backend',  label: 'Backend',          accent: '#a855f7' },
+  { key: 'database', label: 'Database',         accent: '#10b981' },
+  { key: 'tools',    label: 'Tools & DevOps',   accent: '#f97316' },
+  { key: 'practices',label: 'Practices',        accent: '#eab308' },
+];
+
 export const Skills = () => {
   const [ref, isVisible] = useScrollObserver();
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
-    },
-  };
-
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      skills: portfolioData.skills.frontend,
-      gradient: 'from-blue-500 to-cyan-500',
-    },
-    {
-      title: 'Backend',
-      skills: portfolioData.skills.backend,
-      gradient: 'from-purple-500 to-pink-500',
-    },
-    {
-      title: 'Tools & DevOps',
-      skills: portfolioData.skills.tools,
-      gradient: 'from-orange-500 to-red-500',
-    },
-      {
-      title: 'Database',
-      skills: portfolioData.skills.database,
-      gradient: 'from-green-500 to-teal-500',
-    },
-      {
-      title: 'Practices',
-      skills: portfolioData.skills.practices,
-      gradient: 'from-yellow-500 to-amber-500',
-    },
-
-  ];
 
   return (
     <section id="skills" className="section">
@@ -62,70 +32,72 @@ export const Skills = () => {
         initial="hidden"
         animate={isVisible ? 'visible' : 'hidden'}
       >
-        {/* Section header */}
+        {/* Header */}
         <motion.div variants={itemVariants} className="mb-16">
+          <p className="text-sm font-bold uppercase tracking-widest text-primary mb-2">What I work with</p>
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">Skills & Expertise</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" />
+          <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full" />
         </motion.div>
 
-        {/* Skills grid */}
-        <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
-          {skillCategories.map((category) => (
+        {/* Grid — 1→2→3 cols, never squishes at md */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {CATEGORIES.map((cat) => (
             <motion.div
-              key={category.title}
+              key={cat.key}
               variants={itemVariants}
+              className="p-6 rounded-2xl bg-white dark:bg-dark-900 border border-dark-200 dark:border-dark-800 hover:border-primary dark:hover:border-primary transition-colors duration-300"
             >
-              <div className="mb-6">
-                <h3 className={`text-2xl font-bold bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent mb-2`}>
-                  {category.title}
+              {/* Category header */}
+              <div className="flex items-center gap-3 mb-5">
+                <span
+                  className="w-3 h-3 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: cat.accent }}
+                />
+                <h3 className="text-base font-bold text-dark-900 dark:text-dark-50">
+                  {cat.label}
                 </h3>
-                <div className={`w-12 h-1 bg-gradient-to-r ${category.gradient} rounded-full`} />
               </div>
 
-              {/* Skill tags */}
-              <div className="space-y-3">
-                {category.skills.map((skill) => (
-                  <motion.div
+              {/* Skill pills */}
+              <div className="flex flex-wrap gap-2">
+                {portfolioData.skills[cat.key].map((skill) => (
+                  <span
                     key={skill}
-                    whileHover={{ x: 8, scale: 1.02 }}
-                    className="p-4 rounded-lg bg-white dark:bg-dark-800 border-2 border-dark-200 dark:border-dark-700 hover:border-primary dark:hover:border-primary transition-all duration-300 cursor-pointer"
+                    className="px-3 py-1.5 text-xs font-semibold rounded-full border transition-colors duration-200 cursor-default"
+                    style={{
+                      backgroundColor: `${cat.accent}14`,
+                      borderColor: `${cat.accent}40`,
+                      color: cat.accent,
+                    }}
                   >
-                    <span className="font-semibold text-dark-900 dark:text-dark-50">
-                      {skill}
-                    </span>
-                    {/* Animated progress bar */}
-                    <div className="w-full h-1 bg-dark-100 dark:bg-dark-700 rounded-full mt-3 overflow-hidden">
-                      <motion.div
-                        className={`h-full bg-gradient-to-r ${category.gradient}`}
-                        initial={{ width: 0 }}
-                        animate={isVisible ? { width: '85%' } : { width: 0 }}
-                        transition={{ duration: 1.2, ease: 'easeOut' }}
-                      />
-                    </div>
-                  </motion.div>
+                    {skill}
+                  </span>
                 ))}
               </div>
             </motion.div>
           ))}
-        </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          variants={itemVariants}
-          className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 dark:border-primary/30 text-center"
-        >
-          <p className="text-dark-700 dark:text-dark-300 mb-4">
-            Interested in collaborating or learning more about my technical capabilities?
-          </p>
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-primary inline-block"
+          {/* CTA card — fills remaining space in the grid row */}
+          <motion.div
+            variants={itemVariants}
+            className="sm:col-span-2 lg:col-span-3 p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 dark:border-primary/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
           >
-            Schedule a Chat
-          </motion.a>
-        </motion.div>
+            <div>
+              <p className="font-semibold text-dark-900 dark:text-dark-50 mb-1">Interested in collaborating?</p>
+              <p className="text-sm text-dark-600 dark:text-dark-400">
+                I'm always open to learning, building, and solving interesting problems.
+              </p>
+            </div>
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="btn-primary flex-shrink-0"
+            >
+              Get In Touch
+            </motion.a>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );
