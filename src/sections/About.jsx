@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useScrollObserver } from '../hooks';
 import { portfolioData } from '../utils/portfolioData';
-import profileImage from '../assets/dd.jpeg';
+import profileImage from '../assets/dd.jpg';
 
 // Defined outside component — never recreated on re-render
 const containerVariants = {

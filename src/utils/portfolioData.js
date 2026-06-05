@@ -59,19 +59,19 @@ export const portfolioData = {
     projects: [
         {
             id: 1,
-            title: 'Design System Pro',
-            description: 'A comprehensive design system with 100+ reusable components, built with React and Storybook. Includes documentation, accessibility guidelines, and animated component previews.',
-            image: 'https://images.unsplash.com/photo-1555066931-4365d440a0b0?w=600&h=340&fit=crop',
-            tags: ['React', 'TypeScript', 'Storybook', 'Tailwind CSS'],
+            title: 'Employee Attendance & Internal Communication Platform',
+            description: 'Developed a full-stack Employee Attendance & Internal Communication Platform using React.js and Spring Boot, enabling attendance tracking, leave management, internal messaging, announcements, and role-based access control through secure REST APIs and JWT authentication.',
+            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop&utm_source=chatgpt.com',
+            tags: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Redis', 'JWT', 'WebSocket', 'AWS S3'],
             github: 'https://github.com/iamddas',
             demo: 'https://github.com/iamddas',
         },
         {
             id: 2,
-            title: 'Analytics Dashboard',
-            description: 'Real-time analytics platform with interactive charts, user behavior tracking, and customizable dashboards. Built with Next.js and D3.js for advanced visualizations.',
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop',
-            tags: ['Next.js', 'D3.js', 'PostgreSQL', 'Prisma'],
+            title: 'Distributed Job Queue System',
+            description: 'Built a Distributed Job Queue System for asynchronous task processing, featuring distributed workers, job scheduling, retry mechanisms, and scalable workload management using message queues and Spring Boot.',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=340&fit=crop&utm_source=chatgpt.com',
+            tags: ['Java', 'Spring Boot', 'Redis', 'PostgreSQL'],
             github: 'https://github.com/iamddas',
             demo: 'https://github.com/iamddas',
         },
@@ -98,7 +98,7 @@ export const portfolioData = {
     experience: [
         {
             id: 1,
-            role: 'Full Stack Engineer',
+            role: 'Software Engineer',
             company: 'Think Talent Services',
             period: '2025 – Present',
             description: 'Working on both frontend and backend development. Migrated a legacy Java Spring Boot 2 application to Spring Boot 3, resolving Jakarta namespace changes and dependency compatibility issues. Enhanced Spring Security by replacing deprecated WebSecurityConfigurerAdapter with SecurityFilterChain configuration. Developed responsive UI using React and TypeScript, integrated REST APIs, and handled CORS configuration.',
@@ -106,7 +106,7 @@ export const portfolioData = {
         },
         {
             id: 2,
-            role: 'Software Engineering Intern',
+            role: 'Intern',
             company: 'Think Talent Services',
             period: '2024 – 2025',
             description: 'Contributed to development and maintenance of web applications using React and Spring Boot. Implemented API integration, form validation, and state management. Fixed bugs, improved UI responsiveness, and assisted in backend endpoint development. Worked with Git-based workflows and learned debugging, API testing, and deployment fundamentals.',
