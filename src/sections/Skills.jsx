@@ -14,8 +14,9 @@ const itemVariants = {
 
 const CATEGORIES = [
   { key: 'frontend', label: 'Frontend',        accent: '#3b82f6' },
-  { key: 'backend',  label: 'Backend',          accent: '#a855f7' },
+  { key: 'backend',  label: 'Backend',          accent: '#8208f6' },
   { key: 'database', label: 'Database',         accent: '#10b981' },
+    { key: 'cloud', label: 'Cloud',         accent: '#b310b9' },
   { key: 'tools',    label: 'Tools & DevOps',   accent: '#f97316' },
   { key: 'practices',label: 'Practices',        accent: '#eab308' },
 ];

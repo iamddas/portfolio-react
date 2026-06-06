@@ -22,12 +22,14 @@ export const portfolioData = {
         ],
 
         backend: [
+            'Java',
             'Spring Boot',
             'Spring Security',
             'REST API Development',
             'JWT / Session Auth',
             'MVC Architecture',
             'JPA / Hibernate',
+            'Microservice Architecture',
             'Exception Handling',
         ],
 
@@ -36,6 +38,10 @@ export const portfolioData = {
             'PostgreSQL',
             'Schema Design',
             'Entity Relationships',
+        ],
+
+        cloud: [
+            'AWS (S3, CloudWatch, ElastiCache)'
         ],
 
         tools: [
